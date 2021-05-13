@@ -48,13 +48,13 @@ public class App {
 
         out.printf("""
 
-            highest: %d
-            lowest: %d
-            average: %.2f
-            A: %d
-            B: %d
-            C: %d
-            failed: %d\n""",
+            highest score: %d
+            lowest score: %d
+            mean of the scores: %.2f
+            count of A scores: %d
+            count of B scores: %d
+            count of C scores: %d
+            count of failing scores: %d\n""",
             highest,
             lowest,
             avg,
