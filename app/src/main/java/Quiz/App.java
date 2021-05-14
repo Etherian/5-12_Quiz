@@ -12,20 +12,17 @@ public class App {
         PrintStream out = System.out;
 
         ArrayList<Integer> grades = new ArrayList<>();
-        while (true) {
+
+        String response = "yes";
+
+        while (!response.startsWith("n")) {
             out.print("Please enter a grade: ");
             Integer newGrade = in.nextInt();
             grades.add(newGrade);
 
             out.print("Would you like to enter another grade (Y/n)? ");
             in.nextLine(); // NOTE This line is a hack that seems to be needed, at least with my terminal.
-            String resp = in.nextLine().toLowerCase();
-
-            if (resp == "" || resp.charAt(0) != 'n') {
-                continue;
-            } else {
-                break;
-            }
+            response = in.nextLine().toLowerCase();
         }
 
         Integer highest = Collections.max(grades);
